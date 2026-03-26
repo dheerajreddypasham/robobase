@@ -49,7 +49,7 @@ export default function PerceptionPage() {
         {/* Sensor array */}
         <div className="mb-8">
           <p style={{ fontFamily: "JetBrains Mono", fontSize: "0.6rem", letterSpacing: "0.1em", color: "var(--rb-primary-c)", marginBottom: "1rem" }}>// CONNECTED SENSOR ARRAY</p>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-px" style={{ background: "rgba(255,181,156,0.06)" }}>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-px" style={{ background: "rgba(0,0,0,0.06)" }}>
             {SENSORS.map((s) => (
               <div key={s.name} className="p-4" style={{ background: "var(--rb-container)" }}>
                 <div className="flex items-center justify-between mb-2">
@@ -75,7 +75,7 @@ export default function PerceptionPage() {
             <div style={{ background: "var(--rb-container)", overflowX: "auto" }}>
               <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
-                  <tr style={{ borderBottom: "1px solid rgba(255,181,156,0.1)" }}>
+                  <tr style={{ borderBottom: "1px solid rgba(0,0,0,0.08)" }}>
                     {["RANK", "MODEL", "ATE ↓", "RPE ↓", "FPS ↑", "HARDWARE", "SCORE"].map(h => (
                       <th key={h} style={{ fontFamily: "JetBrains Mono", fontSize: "0.58rem", color: "var(--rb-text-dim)", padding: "0.75rem 1rem", textAlign: "left", letterSpacing: "0.06em", whiteSpace: "nowrap" }}>{h}</th>
                     ))}
@@ -83,7 +83,7 @@ export default function PerceptionPage() {
                 </thead>
                 <tbody>
                   {b.models.map((m, i) => (
-                    <tr key={m.name} style={{ borderBottom: "1px solid rgba(255,181,156,0.04)", background: m.name.includes("★") ? "rgba(245,97,38,0.05)" : "transparent" }}>
+                    <tr key={m.name} style={{ borderBottom: "1px solid rgba(0,0,0,0.04)", background: m.name.includes("★") ? "rgba(245,97,38,0.05)" : "transparent" }}>
                       <td style={{ fontFamily: "JetBrains Mono", fontSize: "0.65rem", color: i === 0 ? "var(--rb-primary)" : "var(--rb-text-dim)", padding: "0.75rem 1rem", fontWeight: i === 0 ? 700 : 400 }}>#{i+1}</td>
                       <td style={{ fontFamily: "Space Grotesk", fontWeight: 500, fontSize: "0.82rem", color: m.name.includes("★") ? "var(--rb-primary-c)" : "var(--rb-text)", padding: "0.75rem 1rem", whiteSpace: "nowrap" }}>{m.name}</td>
                       <td style={{ fontFamily: "JetBrains Mono", fontSize: "0.65rem", color: "var(--rb-text)", padding: "0.75rem 1rem" }}>{m.ate}</td>

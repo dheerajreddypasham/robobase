@@ -52,14 +52,14 @@ export default function ReposPage() {
               padding: "0.35rem 0.85rem",
               background: active === f ? "rgba(245,97,38,0.15)" : "var(--rb-container)",
               color: active === f ? "var(--rb-primary-c)" : "var(--rb-text-dim)",
-              border: active === f ? "1px solid rgba(245,97,38,0.3)" : "1px solid rgba(255,181,156,0.1)",
+              border: active === f ? "1px solid rgba(245,97,38,0.3)" : "1px solid rgba(0,0,0,0.08)",
               cursor: "pointer", transition: "all 0.1s",
             }}>{f}</button>
           ))}
           <span className="ml-auto badge">[{filtered.length} REPOS]</span>
         </div>
 
-        <div className="flex flex-col gap-px" style={{ background: "rgba(255,181,156,0.06)" }}>
+        <div className="flex flex-col gap-px" style={{ background: "rgba(0,0,0,0.06)" }}>
           {filtered.map((r) => (
             <div key={r.id} className="p-5 flex items-start gap-4" style={{ background: "var(--rb-container)", transition: "background 0.12s", cursor: "pointer" }}
               onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.background = "var(--rb-high)"; }}

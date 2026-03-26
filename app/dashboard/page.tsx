@@ -50,7 +50,7 @@ export default function DashboardPage() {
         </div>
 
         {/* KPI row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px mb-8" style={{ background: "rgba(255,181,156,0.06)" }}>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px mb-8" style={{ background: "rgba(0,0,0,0.06)" }}>
           {KPI.map((k) => (
             <div key={k.label} className="p-5" style={{ background: "var(--rb-container)" }}>
               <p style={{ fontFamily: "JetBrains Mono", fontSize: "0.6rem", letterSpacing: "0.08em", color: "var(--rb-text-dim)", marginBottom: "0.4rem" }}>{k.label}</p>
@@ -99,7 +99,7 @@ export default function DashboardPage() {
                 <span style={{ fontFamily: "JetBrains Mono", fontSize: "0.72rem", color: c as string, fontWeight: 700 }}>{v}</span>
               </div>
             ))}
-            <div style={{ borderTop: "1px solid rgba(255,181,156,0.1)", paddingTop: "1rem", marginTop: "auto" }}>
+            <div style={{ borderTop: "1px solid rgba(0,0,0,0.08)", paddingTop: "1rem", marginTop: "auto" }}>
               <p style={{ fontFamily: "JetBrains Mono", fontSize: "0.55rem", color: "var(--rb-text-dim)", lineHeight: 1.9 }}>
                 [SESSION: 2026-03-25T09:14Z]<br />
                 [PLAN: PRO · RENEWS 2026-04-01]<br />
@@ -115,7 +115,7 @@ export default function DashboardPage() {
             <p style={{ fontFamily: "JetBrains Mono", fontSize: "0.6rem", letterSpacing: "0.1em", color: "var(--rb-primary-c)" }}>// YOUR REPOSITORIES</p>
             <Link href="/repos" style={{ fontFamily: "JetBrains Mono", fontSize: "0.6rem", color: "var(--rb-text-dim)", textDecoration: "none" }}>VIEW ALL →</Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px" style={{ background: "rgba(255,181,156,0.06)" }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px" style={{ background: "rgba(0,0,0,0.06)" }}>
             {MY_REPOS.map((r) => (
               <div key={r.name} className="p-5" style={{ background: "var(--rb-container)" }}>
                 <div className="flex items-start justify-between mb-2 gap-2">

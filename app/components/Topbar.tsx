@@ -6,7 +6,7 @@ export default function Topbar() {
   const pathname = usePathname();
 
   return (
-    <header style={{ background: "var(--rb-container)", borderBottom: "1px solid rgba(255,181,156,0.08)" }}
+    <header style={{ background: "var(--rb-container)", borderBottom: "1px solid rgba(0,0,0,0.08)" }}
       className="flex items-center justify-between px-6 h-12 shrink-0 z-50 sticky top-0">
       {/* Logo */}
       <Link href="/" className="flex items-center gap-3 text-decoration-none">

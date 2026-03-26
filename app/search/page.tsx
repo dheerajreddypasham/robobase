@@ -17,7 +17,7 @@ const TYPE_COLOR: Record<string, string> = {
   REPO:    "rgba(245,97,38,0.15)",
   DATASET: "rgba(0,230,57,0.1)",
   MODEL:   "rgba(100,150,255,0.15)",
-  POST:    "rgba(255,181,156,0.1)",
+  POST:    "rgba(0,0,0,0.08)",
   PATH:    "rgba(245,97,38,0.08)",
 };
 
@@ -51,12 +51,12 @@ export default function SearchPage() {
             placeholder="e.g. stereo visual odometry ROS2, diffusion policy manipulation, depth estimation edge..."
             style={{
               width: "100%", padding: "0.9rem 1rem 0.9rem 2.5rem",
-              background: "var(--rb-container)", border: "1px solid rgba(255,181,156,0.12)",
+              background: "var(--rb-container)", border: "1px solid rgba(0,0,0,0.1)",
               color: "var(--rb-text)", fontFamily: "Inter", fontSize: "0.9rem",
               outline: "none", boxSizing: "border-box",
             }}
             onFocus={e => { e.target.style.borderColor = "rgba(245,97,38,0.4)"; }}
-            onBlur={e => { e.target.style.borderColor = "rgba(255,181,156,0.12)"; }}
+            onBlur={e => { e.target.style.borderColor = "rgba(0,0,0,0.1)"; }}
           />
           <span style={{ position: "absolute", right: "1.1rem", top: "50%", transform: "translateY(-50%)", fontFamily: "JetBrains Mono", fontSize: "0.58rem", color: "var(--rb-text-dim)" }}>AI-POWERED</span>
         </div>
@@ -69,7 +69,7 @@ export default function SearchPage() {
               padding: "0.35rem 0.85rem",
               background: filter === f ? "rgba(245,97,38,0.15)" : "var(--rb-container)",
               color: filter === f ? "var(--rb-primary-c)" : "var(--rb-text-dim)",
-              border: filter === f ? "1px solid rgba(245,97,38,0.3)" : "1px solid rgba(255,181,156,0.1)",
+              border: filter === f ? "1px solid rgba(245,97,38,0.3)" : "1px solid rgba(0,0,0,0.08)",
               cursor: "pointer",
             }}>{f}</button>
           ))}
@@ -77,7 +77,7 @@ export default function SearchPage() {
         </div>
 
         {/* Results */}
-        <div className="flex flex-col gap-px" style={{ background: "rgba(255,181,156,0.06)" }}>
+        <div className="flex flex-col gap-px" style={{ background: "rgba(0,0,0,0.06)" }}>
           {results.map((r, i) => (
             <div key={i} className="p-5 flex items-start gap-5" style={{ background: "var(--rb-container)", cursor: "pointer", transition: "background 0.1s" }}
               onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.background = "var(--rb-high)"; }}

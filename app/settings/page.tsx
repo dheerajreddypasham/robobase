@@ -41,7 +41,7 @@ export default function SettingsPage() {
                     <p style={{ fontFamily: "JetBrains Mono", fontSize: "0.58rem", color: "var(--rb-text-dim)", marginBottom: "0.4rem", letterSpacing: "0.06em" }}>{label}</p>
                     <input defaultValue={val} style={{
                       width: "100%", padding: "0.6rem 0.75rem",
-                      background: "var(--rb-high)", border: "1px solid rgba(255,181,156,0.1)",
+                      background: "var(--rb-high)", border: "1px solid rgba(0,0,0,0.08)",
                       color: "var(--rb-text)", fontFamily: "Inter", fontSize: "0.82rem", outline: "none", boxSizing: "border-box",
                     }} />
                   </div>
@@ -51,7 +51,7 @@ export default function SettingsPage() {
                 <p style={{ fontFamily: "JetBrains Mono", fontSize: "0.58rem", color: "var(--rb-text-dim)", marginBottom: "0.4rem", letterSpacing: "0.06em" }}>BIO</p>
                 <textarea defaultValue="Robotics engineer focused on visual perception and SLAM. Building stereo VO pipelines for edge hardware. ASU Robotics Research Lab." rows={3} style={{
                   width: "100%", padding: "0.6rem 0.75rem",
-                  background: "var(--rb-high)", border: "1px solid rgba(255,181,156,0.1)",
+                  background: "var(--rb-high)", border: "1px solid rgba(0,0,0,0.08)",
                   color: "var(--rb-text)", fontFamily: "Inter", fontSize: "0.82rem", outline: "none", resize: "vertical", boxSizing: "border-box",
                 }} />
               </div>
@@ -71,7 +71,7 @@ export default function SettingsPage() {
                 { name: "CLI access (MacBook Pro)", key: "rbk_live_••••••••••••••••••••G4xK", created: "2026-02-14", lastUsed: "2h ago",    scopes: ["REPO_READ","REPO_WRITE","BENCHMARK"] },
                 { name: "CI/CD pipeline (GitHub Actions)", key: "rbk_live_••••••••••••••••••••T9mZ", created: "2026-01-08", lastUsed: "1d ago", scopes: ["REPO_READ","MODEL_DOWNLOAD"] },
               ].map(k => (
-                <div key={k.name} className="p-4 mb-3" style={{ background: "var(--rb-high)", border: "1px solid rgba(255,181,156,0.08)" }}>
+                <div key={k.name} className="p-4 mb-3" style={{ background: "var(--rb-high)", border: "1px solid rgba(0,0,0,0.08)" }}>
                   <div className="flex items-center justify-between mb-2 gap-3">
                     <span style={{ fontFamily: "Space Grotesk", fontWeight: 600, fontSize: "0.82rem", color: "var(--rb-text)" }}>{k.name}</span>
                     <button style={{ fontFamily: "JetBrains Mono", fontSize: "0.58rem", color: "var(--rb-primary-c)", background: "none", border: "1px solid rgba(245,97,38,0.3)", padding: "0.25rem 0.6rem", cursor: "pointer" }}>REVOKE</button>

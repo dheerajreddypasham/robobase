@@ -113,10 +113,10 @@ export default function LandingPage() {
       </section>
 
       {/* STATS STRIP */}
-      <section style={{ background: "var(--rb-container)", borderTop: "1px solid rgba(255,181,156,0.08)", borderBottom: "1px solid rgba(255,181,156,0.08)" }}
+      <section style={{ background: "var(--rb-container)", borderTop: "1px solid rgba(0,0,0,0.08)", borderBottom: "1px solid rgba(0,0,0,0.08)" }}
         className="grid grid-cols-2 md:grid-cols-4">
         {STATS.map((s, i) => (
-          <div key={s.label} className="px-8 py-7" style={{ borderRight: i < 3 ? "1px solid rgba(255,181,156,0.06)" : "none" }}>
+          <div key={s.label} className="px-8 py-7" style={{ borderRight: i < 3 ? "1px solid rgba(0,0,0,0.06)" : "none" }}>
             <p style={{ fontFamily: "JetBrains Mono", fontSize: "0.6rem", letterSpacing: "0.1em", color: "var(--rb-text-dim)", marginBottom: "0.4rem" }}>{s.label}</p>
             <p style={{ fontFamily: "Space Grotesk", fontWeight: 700, fontSize: "1.9rem", color: "var(--rb-primary)", lineHeight: 1 }}>{s.value}</p>
             <p style={{ fontFamily: "JetBrains Mono", fontSize: "0.55rem", color: "var(--rb-text-dim)", marginTop: "0.3rem", letterSpacing: "0.06em" }}>{s.unit}</p>
@@ -130,7 +130,7 @@ export default function LandingPage() {
           <p style={{ fontFamily: "JetBrains Mono", fontSize: "0.6rem", letterSpacing: "0.12em", color: "var(--rb-primary-c)", marginBottom: "0.5rem" }}>// WHAT YOU CAN DO</p>
           <h2 style={{ fontFamily: "Space Grotesk", fontSize: "2.25rem", fontWeight: 700, color: "var(--rb-text)", maxWidth: 480, lineHeight: 1.2 }}>One platform. Every tool a robotics engineer needs.</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "1px", background: "rgba(255,181,156,0.06)" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "1px", background: "rgba(0,0,0,0.06)" }}>
           {FEATURES.map((f) => (
             <Link key={f.href} href={f.href} style={{ textDecoration: "none", display: "block" }}>
               <div className="p-10 h-full" style={{ background: "var(--rb-container)", transition: "background 0.15s" }}
@@ -147,7 +147,7 @@ export default function LandingPage() {
       </section>
 
       {/* TRENDING REPOS */}
-      <section className="px-12 md:px-20 py-20" style={{ background: "var(--rb-container)", borderTop: "1px solid rgba(255,181,156,0.06)" }}>
+      <section className="px-12 md:px-20 py-20" style={{ background: "var(--rb-container)", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
         <div className="flex items-end justify-between mb-10">
           <div>
             <p style={{ fontFamily: "JetBrains Mono", fontSize: "0.6rem", letterSpacing: "0.12em", color: "var(--rb-primary-c)", marginBottom: "0.5rem" }}>// TRENDING THIS WEEK</p>
@@ -155,7 +155,7 @@ export default function LandingPage() {
           </div>
           <Link href="/repos" style={{ fontFamily: "JetBrains Mono", fontSize: "0.65rem", color: "var(--rb-primary-c)", textDecoration: "none", letterSpacing: "0.08em" }}>VIEW ALL →</Link>
         </div>
-        <div className="flex flex-col gap-px" style={{ background: "rgba(255,181,156,0.06)" }}>
+        <div className="flex flex-col gap-px" style={{ background: "rgba(0,0,0,0.06)" }}>
           {TRENDING.map((r) => (
             <div key={r.name} className="p-6 flex items-center gap-6" style={{ background: "var(--rb-base)" }}>
               <div className="flex-1">
@@ -174,7 +174,7 @@ export default function LandingPage() {
       </section>
 
       {/* USED BY */}
-      <section className="px-12 md:px-20 py-16" style={{ background: "var(--rb-base)", borderTop: "1px solid rgba(255,181,156,0.06)" }}>
+      <section className="px-12 md:px-20 py-16" style={{ background: "var(--rb-base)", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
         <p style={{ fontFamily: "JetBrains Mono", fontSize: "0.6rem", letterSpacing: "0.12em", color: "var(--rb-text-dim)", marginBottom: "2rem", textAlign: "center" }}>TRUSTED BY ENGINEERS AT</p>
         <div className="flex flex-wrap justify-center gap-x-12 gap-y-4">
           {USEDBY.map(name => (
@@ -185,7 +185,7 @@ export default function LandingPage() {
 
       {/* CTA */}
       <section className="px-12 md:px-20 py-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-8"
-        style={{ background: "var(--rb-container)", borderTop: "1px solid rgba(255,181,156,0.08)" }}>
+        style={{ background: "var(--rb-container)", borderTop: "1px solid rgba(0,0,0,0.08)" }}>
         <div>
           <h2 style={{ fontFamily: "Space Grotesk", fontSize: "2rem", fontWeight: 700, color: "var(--rb-text)", marginBottom: "0.6rem" }}>Start building today.</h2>
           <p style={{ fontFamily: "Inter", fontSize: "0.9rem", color: "var(--rb-text-dim)", maxWidth: 420, lineHeight: 1.65 }}>Free for open-source robotics projects. Pro plans for teams needing private repos, compute credits, and priority benchmark queues.</p>

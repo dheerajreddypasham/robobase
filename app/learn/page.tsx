@@ -116,7 +116,7 @@ export default function LearnPage() {
         </div>
 
         {/* Paths grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px" style={{ background: "rgba(255,181,156,0.06)" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px" style={{ background: "rgba(0,0,0,0.06)" }}>
           {PATHS.map((p) => {
             const pct = Math.round((p.completed / p.modules) * 100);
             return (

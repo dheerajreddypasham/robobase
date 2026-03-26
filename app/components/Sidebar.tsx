@@ -20,7 +20,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside style={{ width: 200, background: "var(--rb-low)", borderRight: "1px solid rgba(255,181,156,0.06)" }}
+    <aside style={{ width: 200, background: "var(--rb-low)", borderRight: "1px solid rgba(0,0,0,0.06)" }}
       className="flex flex-col shrink-0 py-4">
       <div className="flex-1 flex flex-col gap-0.5 px-3">
         {NAV.map(({ href, label, icon }) => {
@@ -49,7 +49,7 @@ export default function Sidebar() {
       </div>
 
       <div className="flex flex-col gap-0.5 px-3 pt-4"
-        style={{ borderTop: "1px solid rgba(255,181,156,0.06)" }}>
+        style={{ borderTop: "1px solid rgba(0,0,0,0.06)" }}>
         {BOTTOM.map(({ href, label, icon }) => {
           const active = pathname === href;
           return (

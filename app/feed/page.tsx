@@ -104,7 +104,7 @@ export default function FeedPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Main feed */}
-          <div className="md:col-span-2 flex flex-col gap-px" style={{ background: "rgba(255,181,156,0.06)" }}>
+          <div className="md:col-span-2 flex flex-col gap-px" style={{ background: "rgba(0,0,0,0.06)" }}>
             {POSTS.map((p) => (
               <div key={p.id} className="p-6" style={{ background: "var(--rb-container)" }}>
                 <div className="flex items-center gap-3 mb-3 flex-wrap">
@@ -124,7 +124,7 @@ export default function FeedPage() {
                 <div className="flex items-center gap-2 mb-3 flex-wrap">
                   {p.tags.map(t => <span key={t} className="badge" style={{ fontSize: "0.55rem" }}>{t}</span>)}
                 </div>
-                <div className="flex items-center gap-4" style={{ borderTop: "1px solid rgba(255,181,156,0.06)", paddingTop: "0.75rem" }}>
+                <div className="flex items-center gap-4" style={{ borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: "0.75rem" }}>
                   <button style={{ fontFamily: "JetBrains Mono", fontSize: "0.62rem", color: "var(--rb-primary)", background: "none", border: "none", cursor: "pointer", padding: 0 }}>▲ {p.likes}</button>
                   <button style={{ fontFamily: "JetBrains Mono", fontSize: "0.62rem", color: "var(--rb-text-dim)", background: "none", border: "none", cursor: "pointer", padding: 0 }}>◎ {p.comments} REPLIES</button>
                   <button style={{ fontFamily: "JetBrains Mono", fontSize: "0.62rem", color: "var(--rb-text-dim)", background: "none", border: "none", cursor: "pointer", padding: 0, marginLeft: "auto" }}>BOOKMARK</button>

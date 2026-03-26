@@ -3,20 +3,27 @@
 @import "tailwindcss";
 
 :root {
-  --rb-base:       #0e0e0e;
-  --rb-low:        #1c1b1b;
-  --rb-surface:    #131313;
-  --rb-container:  #201f1f;
-  --rb-high:       #2a2a2a;
-  --rb-highest:    #353534;
-  --rb-bright:     #393939;
-  --rb-primary:    #ffb59c;
-  --rb-primary-c:  #f56126;
-  --rb-text:       #e5e2e1;
-  --rb-text-dim:   #e2bfb4;
-  --rb-green:      #00e639;
-  --rb-outline:    #a98a80;
-  --rb-outline-v:  #5a4139;
+  /* ── Warm cream surface scale ─────────────────────── */
+  --rb-base:       #F5F0E8;   /* page background */
+  --rb-low:        #EEE8DC;   /* sidebar */
+  --rb-surface:    #EAE4D8;
+  --rb-container:  #E5DDD0;   /* cards & panels */
+  --rb-high:       #D9D0BF;   /* hover */
+  --rb-highest:    #CCC2AF;
+  --rb-bright:     #BDB39E;
+
+  /* ── Orange accent scale ──────────────────────────── */
+  --rb-primary:    #B83A0C;   /* deep rust — links, headings, stars */
+  --rb-primary-c:  #E85020;   /* vivid orange — labels, CTAs, active */
+
+  /* ── Typography ───────────────────────────────────── */
+  --rb-text:       #1C1510;   /* near-black warm brown */
+  --rb-text-dim:   #7A6A58;   /* muted warm brown */
+
+  /* ── Status ───────────────────────────────────────── */
+  --rb-green:      #1A7530;   /* forest green */
+  --rb-outline:    #A89888;
+  --rb-outline-v:  #7A6858;
 }
 
 * { box-sizing: border-box; }
@@ -48,10 +55,10 @@ code, kbd, samp, pre, .mono {
 ::-webkit-scrollbar-track { background: var(--rb-base); }
 ::-webkit-scrollbar-thumb { background: var(--rb-highest); }
 
-/* Primary orange gradient button */
+/* Primary button — rust-to-vivid orange gradient */
 .btn-primary {
-  background: linear-gradient(45deg, #ffb59c, #f56126);
-  color: #5c1a00;
+  background: linear-gradient(45deg, var(--rb-primary-c), var(--rb-primary));
+  color: #FFF5EE;
   font-family: "JetBrains Mono", monospace;
   font-size: 0.7rem;
   font-weight: 700;
@@ -64,7 +71,7 @@ code, kbd, samp, pre, .mono {
   display: inline-block;
   text-decoration: none;
 }
-.btn-primary:hover { opacity: 0.85; }
+.btn-primary:hover { opacity: 0.88; }
 
 /* Ghost button */
 .btn-ghost {
@@ -76,19 +83,19 @@ code, kbd, samp, pre, .mono {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.7rem 1.5rem;
-  border: 1px solid rgba(255, 181, 156, 0.25);
+  border: 1px solid rgba(184,58,12,0.3);
   cursor: pointer;
   transition: background 0.15s;
   display: inline-block;
   text-decoration: none;
 }
-.btn-ghost:hover { background: rgba(255, 181, 156, 0.06); }
+.btn-ghost:hover { background: rgba(184,58,12,0.06); }
 
 /* Metadata badge */
 .badge {
   display: inline-flex;
   align-items: center;
-  background: #474747;
+  background: #DDD4C4;
   color: var(--rb-text-dim);
   font-family: "JetBrains Mono", monospace;
   font-size: 0.6rem;
@@ -97,9 +104,9 @@ code, kbd, samp, pre, .mono {
   white-space: nowrap;
 }
 
-/* HUD glassmorphic panel */
+/* HUD panel — cream glassmorphic */
 .hud-panel {
-  background: rgba(53, 53, 52, 0.72);
+  background: rgba(234, 228, 216, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-left: 2px solid var(--rb-primary-c);
@@ -112,6 +119,6 @@ code, kbd, samp, pre, .mono {
 }
 
 /* Status LED dot */
-.led-green { color: var(--rb-green); }
+.led-green  { color: var(--rb-green); }
 .led-orange { color: var(--rb-primary-c); }
-.led-dim { color: var(--rb-text-dim); }
+.led-dim    { color: var(--rb-text-dim); }
